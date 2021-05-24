@@ -21,10 +21,10 @@ app.listen(8081, function () {
 // app.get('/test', function (req, res) {
 //     res.send(mockAPIResponse)
 // })
-app.get("/getData", (req, res) => {
-  res.send(projectData);
-});
-app.post("/addWeather", async (req, res) => {
+// app.get("/getData", (req, res) => {
+//   res.send(projectData);
+// });
+app.post("/addUrl", async (req, res) => {
   console.log('req====+>', req.body)
   const result = await fetch("https://api.meaningcloud.com/sentiment-2.1?key=" + process.env.API_KEY + "&url=" + req.body.text + "&lang=en")
   try {
