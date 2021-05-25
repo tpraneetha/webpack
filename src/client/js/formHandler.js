@@ -1,11 +1,4 @@
-// const baseURL = "http://api.openweathermap.org/data/2.5/weather?zip=";
-// const apiKey = "&units=metric&appid=19ba431c3fea44c4469111d60f7c2d18";
-// //date
-// const date = new Date();
-// const newDate =
-//   date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear();
-//event listener
-// document.getElementById("generate").addEventListener("click", weatherGenerator);
+
 export function weatherGenerator(e) {
   e.preventDefault()
   const urlEntered = document.getElementById("zip").value;
@@ -33,16 +26,7 @@ const postData = async (url = "", data = {}) => {
     console.log("error", error);
   }
 };
-/* Function to GET Project Data */
-// const getData = async (url = "") => {
-//   const request = await fetch(url);
-//   try {
-//     const getData = await request.json();
-//     console.log(getData);
-//   } catch (error) {
-//     console.log("error", error);
-//   }
-// };
+
 //ui update
 const updateUI = async response => {
   document.getElementById("results").innerText = "Agreement: " + response.agreement +
@@ -50,13 +34,4 @@ const updateUI = async response => {
     "Confidence: " + response.confidence +
     "Irony: " + response.irony;
 };
-    // check what text was put into the form field
-//     let formText = document.getElementById('name').value
-//     Client.checkForName(formText)
-//     console.log("::: Form Submitted :::")
-//     fetch('http://localhost:8081/test')
-//     .then(res => res.json())
-//     .then(function(res) {
-//         document.getElementById('results').innerHTML = res.message
-//     })
-// }
+    

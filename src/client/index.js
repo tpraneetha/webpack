@@ -1,4 +1,4 @@
-// import { checkForName } from './js/nameChecker'
+
 import { weatherGenerator } from './js/formHandler'
 import './styles/resets.scss'
 import './styles/base.scss'
