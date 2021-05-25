@@ -7,7 +7,7 @@ import './styles/form.scss'
 import './styles/header.scss'
 // console.log(weatherGenerator);
 
-alert(" from index.js/client")
+// alert(" from index.js/client")
 export {
     weatherGenerator
    }
