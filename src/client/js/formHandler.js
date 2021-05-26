@@ -1,10 +1,14 @@
+import { validate } from "./validate";
 
 export function weatherGenerator(e) {
   e.preventDefault()
-  const urlEntered = document.getElementById("zip").value;
+  const urlEntered = document.getElementById("url").value;
+  if (validate(url)){
   postData("http://localhost:8081/addUrl", {
     text: urlEntered
   })
+}else{
+    alert('enter correct url')
 }
 /* Function to POST data */
 const postData = async (url = "", data = {}) => {
@@ -33,5 +37,5 @@ const updateUI = async response => {
     "Subjectivity: " + response.subjectivity +
     "Confidence: " + response.confidence +
     "Irony: " + response.irony;
-};
-    
+}
+}
