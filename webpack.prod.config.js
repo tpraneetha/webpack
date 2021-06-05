@@ -32,7 +32,8 @@ plugins:[
         template:"./src/client/views/index.html",
         filename:"./index.html",
     }),new MiniCssExtractPlugin({ filename: "[name].css" }),
-    new WorkboxPlugin.GenerateSW(),new CleanWebpackPlugin({
+    new WorkboxPlugin.GenerateSW(),
+    new CleanWebpackPlugin({
         // Simulate the removal of files
         dry: true,
         // Write Logs to Console
